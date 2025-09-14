@@ -1,0 +1,572 @@
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #6a5acd;
+    /* Mirip dengan warna ungu di desain */
+    --background-color: #f8f9fa;
+    --card-background: #ffffff;
+    --text-color: #343a40;
+    --text-muted: #6c757d;
+    --sidebar-bg: #ffffff;
+    --active-link: #6a5acd;
+    --border-color: #e9ecef;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dashboard-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 320px;
+    grid-gap: 24px;
+    padding: 24px;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+/* GANTI CSS LAMA ANDA DENGAN YANG INI */
+
+/* Sidebar Navigation */
+.sidebar {
+    background-color: #2b2a4c;
+    /* Warna ungu gelap dari gambar */
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+}
+
+.sidebar .logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #ffffff;
+    /* Warna logo menjadi putih */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.sidebar nav li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    color: #eaeaea;
+    /* Warna teks menu menjadi putih pudar */
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar nav li a i {
+    margin-right: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* State saat menu aktif atau di-hover */
+.sidebar nav li a.active,
+.sidebar nav li a:hover {
+    background-color: #39376b;
+    /* Warna latar sedikit lebih terang saat aktif */
+    color: white;
+}
+
+/* --- CSS UNTUK BAGIAN PROFILE --- */
+.sidebar .profile-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #413f74;
+    /* Warna garis pemisah yang lebih terang */
+}
+
+.sidebar .profile-section h3 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #b2b1d2;
+    /* Warna judul "PROFILE" yang sedikit redup */
+    margin-bottom: 12px;
+    padding: 0 18px;
+}
+
+.sidebar .profile-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Kita bisa menggunakan aturan yang sama dari navigasi utama untuk link di profil */
+.sidebar .profile-section li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    color: #eaeaea;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .profile-section li a:hover {
+    background-color: #39376b;
+    color: white;
+}
+
+.sidebar .profile-section li a i {
+    margin-right: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content Area */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hero-card {
+    background: linear-gradient(105deg, #6a5acd 0%, #8a2be2 100%);
+    border-radius: 12px;
+    padding: 32px;
+    color: white;
+    box-shadow: var(--shadow);
+
+    /* Tambahan untuk layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* Memposisikan item ke bawah */
+    gap: 20px;
+}
+
+.hero-card-category {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f1c40f;
+    /* Warna kuning yang lebih cerah */
+    margin-bottom: 16px;
+    /* Jarak ke bawah ditambah */
+    opacity: 0.9;
+}
+
+.hero-card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.hero-card p {
+    font-size: 14px;
+    opacity: 0.8;
+    max-width: 70%;
+    line-height: 1.6;
+}
+
+.hero-card .details {
+    display: flex;
+    gap: 24px;
+    font-size: 13px;
+    margin: 20px 0;
+    opacity: 0.9;
+}
+
+.hero-card .btn-mulai {
+    background-color: white;
+    color: var(--primary-color);
+    /* Padding diubah agar lebih besar */
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    /* Ukuran font juga sedikit diperbesar */
+    font-weight: 600;
+    font-size: 17px;
+    display: inline-block;
+    margin-top: 12px;
+    white-space: nowrap;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* HEADER DI DALAM KONTEN UTAMA */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Atur jarak di sini, Anda bisa ganti nilainya */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    width: 300px;
+}
+
+.search-bar i {
+    color: var(--text-muted);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+    background: none;
+    font-size: 14px;
+}
+
+.header-icons .icon-button {
+    font-size: 20px;
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.kompetensi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.kompetensi-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.kompetensi-card .card-header {
+    padding: 16px;
+    margin: -20px -20px 16px -20px;
+    border-radius: 12px 12px 0 0;
+    color: white;
+    font-weight: 600;
+}
+
+.kompetensi-card .card-header.bg-pemrograman {
+    background: linear-gradient(45deg, #000428, #004e92);
+}
+
+.kompetensi-card .card-header.bg-creative {
+    background: linear-gradient(45deg, #d31027, #ea384d);
+}
+
+.kompetensi-card .card-header.bg-sdm {
+    background: linear-gradient(45deg, #f7971e, #ffd200);
+}
+
+.kompetensi-card h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.kompetensi-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.kompetensi-card ul li {
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.kompetensi-card ul li:last-child {
+    border-bottom: none;
+}
+
+.nilai-peserta table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card-background);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.nilai-peserta th,
+.nilai-peserta td {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.nilai-peserta thead {
+    background-color: #f1f3f5;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.nilai-peserta tbody tr:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Ganti CSS .profile-header lama Anda dengan semua yang ada di bawah ini */
+
+/* --- Ganti semua CSS terkait header profil sebelumnya dengan ini --- */
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    /* Mengatur elemen bertumpuk secara vertikal */
+    align-items: center;
+    /* Memusatkan semua elemen secara horizontal */
+    text-align: center;
+    /* Teks juga di tengah */
+    padding: 20px 0;
+    /* Padding vertikal di sekitar header */
+}
+
+.profile-main-area {
+    position: relative;
+    /* Container untuk memposisikan ikon settings */
+    margin-bottom: 15px;
+    /* Jarak antara foto/ikon dengan teks di bawahnya */
+}
+
+.avatar-container {
+    position: relative;
+    width: 90px;
+    /* Ukuran avatar sedikit lebih besar */
+    height: 90px;
+    display: flex;
+    /* Untuk memusatkan gambar di dalamnya */
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-header img {
+    width: 100%;
+    /* Memastikan gambar mengisi container */
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    /* Shadow lebih kuat */
+    background-color: #ffffff;
+}
+
+.settings-icon {
+    position: absolute;
+    top: 0;
+    /* Pindahkan ke pojok kanan atas avatar */
+    right: 0;
+    background-color: white;
+    color: #333;
+    width: 28px;
+    /* Ukuran ikon lebih besar */
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.2s;
+    font-size: 16px;
+    /* Ukuran ikon roda gigi */
+}
+
+.settings-icon:hover {
+    transform: scale(1.1) rotate(45deg);
+}
+
+.welcome-text-block {
+    margin-top: 10px;
+    /* Jarak atas jika diperlukan */
+}
+
+.welcome-text-block h1 {
+    font-size: 22px;
+    /* Ukuran font lebih besar */
+    font-weight: 600;
+    /* Sedikit lebih tebal */
+    line-height: 1.3;
+    color: #333;
+    margin: 0;
+    text-transform: uppercase;
+    /* Kembali ke uppercase */
+}
+
+.welcome-text-block p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* GANTI SEMUA CSS KALENDER LAMA ANDA DENGAN INI */
+
+/* GANTI SEMUA CSS KALENDER LAMA ANDA DENGAN BLOK INI */
+
+section.calendar {
+    background-color: #2b2a4c !important; /* Latar belakang lebih gelap (charcoal/navy) */
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+section.calendar .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+section.calendar .calendar-nav {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+section.calendar .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 8px;
+}
+
+section.calendar .day-name {
+    font-weight: 500;
+    font-size: 13px;
+    color: #a0aec0;
+    padding-bottom: 10px;
+}
+
+section.calendar .date-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 8px;
+    aspect-ratio: 1 / 1;
+    min-width: 0; /* Mencegah overflow */
+}
+
+section.calendar .date-num {
+    font-weight: 600;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+section.calendar .date-box.active {
+    background-color: #2b2a4c;
+}
+
+section.calendar .date-box.active .date-num {
+    color: #ffffff;
+}
+
+/* Kotak kosong untuk padding tanggal */
+section.calendar .date-box.empty {
+    background-color: transparent;
+}
+
+.jadwal-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.jadwal-item:last-child {
+    border: none;
+}
+
+.jadwal-item .time-block {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-right: 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: white;
+}
+
+.jadwal-item .bg-blue {
+    background-color: #4a90e2;
+}
+
+.jadwal-item .bg-red {
+    background-color: #d0021b;
+}
+
+.jadwal-item .bg-yellow {
+    background-color: #f5a623;
+}
+
+.jadwal-item .info h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.jadwal-item .info p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.ilustrasi img {
+    width: 100%;
+    border-radius: 8px;
+}
