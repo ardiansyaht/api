@@ -32,8 +32,6 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // **BAGIAN TERPENTING ADA DI SINI**
-        // Pastikan Anda mengirimkan respons JSON ini agar bisa dibaca oleh JavaScript.
         return response()->json([
             'status' => 'success',
             'message' => 'Registrasi berhasil! Anda akan diarahkan ke halaman login.',
